@@ -1,6 +1,7 @@
 # ToolDevAssignment
 
-Dungeons & Dragons (D&D) 5th edition monster browser made for the dool development course at DAE
+Dungeons & Dragons (D&D) 5th edition monster browser made in C# for the tool development course at DAE
+![Showcase4](https://github.com/BasRuckebusch/ToolDevAssignment/assets/97399311/cfdc24da-d53d-4836-81d3-2746b497785f)
 
 ## Explain in short why you think this matches with the DAE / GD profile.
 
