@@ -17,6 +17,7 @@ namespace Project.Model
 			public string type { get; set; }
 			public string subtype { get; set; }
 			public string alignment { get; set; }
+			public string image { get; set; }
 		}
 	}
 }

@@ -47,7 +47,7 @@ namespace Project
 			{
 				Repositories.OnlineRepo repository = new Repositories.OnlineRepo();
 				monsters = await repository.GetAllMonstersAsync();
-				Online1.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 255, 0));
+				Online1.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(15, 134, 13));
 			}
 			else
 			{
@@ -117,7 +117,7 @@ namespace Project
 			}
 			else 
 			{
-				Online1.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 255, 0));
+				Online1.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(15, 134, 13));
 			}
 
 			isOnline = !isOnline;

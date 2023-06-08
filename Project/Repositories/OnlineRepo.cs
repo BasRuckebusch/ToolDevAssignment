@@ -33,7 +33,7 @@ namespace Project.Repositories
 				List<MonsterOverview> temp = jobj.SelectToken("results").ToObject<List<MonsterOverview>>();
 				result = temp;
 			}
-			await Task.Delay(30);
+			await Task.Delay(200);
 			monsters = result;
 			return result;
 		}
@@ -52,7 +52,7 @@ namespace Project.Repositories
 				JObject jobj = JsonConvert.DeserializeObject<JObject>(responseTaskString);
 				result = jobj.ToObject<Monster.MonsterInfo>();
 			}
-			await Task.Delay(10);
+			await Task.Delay(100);
 			monster = result;
 			return result;
 		}

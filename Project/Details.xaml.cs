@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -42,6 +43,17 @@ namespace Project
 			{
 				Repositories.OnlineRepo repository = new Repositories.OnlineRepo();
 				monster = await repository.GetMonsterAsync(tag);
+
+				if (!string.IsNullOrEmpty(monster.image))
+				{
+					//https://www.dnd5eapi.co/api/images/monsters/acolyte.png
+					string url = "https://www.dnd5eapi.co" + monster.image;
+					BitmapImage bitmap = new BitmapImage();
+					bitmap.BeginInit();
+					bitmap.UriSource = new Uri(url, UriKind.RelativeOrAbsolute);
+					bitmap.EndInit();
+					MonsterImage.Source = bitmap;
+				}
 			}
 			else
 			{

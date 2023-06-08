@@ -65,7 +65,7 @@
 				FontFamily="'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif"
 				FontSize="12"
 				FontStyle="Italic"
-				Text="Wagoogus" />
+				Text="" />
 		</Grid>
 		<Grid Grid.Row="2" Grid.Column="0">
 			<Grid.ColumnDefinitions>
@@ -74,6 +74,7 @@
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="10" />
+				<RowDefinition Height="Auto" />
 				<RowDefinition Height="Auto" />
 			</Grid.RowDefinitions>
 			<TextBlock
@@ -85,6 +86,14 @@
 				FontSize="14"
 				Text=""
 				TextWrapping="Wrap" />
+			<Image
+				x:Name="MonsterImage"
+				Grid.Row="2"
+				Grid.Column="1"
+				Width="300"
+				Height="300"
+				Margin="0,0,100,0"
+				Stretch="Uniform" />
 		</Grid>
 
 	</Grid>
