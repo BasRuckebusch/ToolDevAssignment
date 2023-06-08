@@ -47,19 +47,25 @@ namespace Project
 			{
 				Repositories.OnlineRepo repository = new Repositories.OnlineRepo();
 				monsters = await repository.GetAllMonstersAsync();
+				Online1.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 255, 0));
 			}
 			else
 			{
 				Repositories.Repository repository = new Repositories.Repository();
 				monsters = await repository.GetAllMonstersAsync();
+				Online1.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 0, 0));
 			}
 
 
 			for (int i = 0; i < monsters.Count(); i++)
 			{
-				TextBlock text = new TextBlock();
-				text.Text = monsters.ElementAt(i).name;
-				text.Tag = monsters.ElementAt(i).index.ToString();
+
+				TextBlock text = new TextBlock
+				{
+					Text = monsters.ElementAt(i).name,
+					Tag = monsters.ElementAt(i).index.ToString(),
+					FontFamily = new System.Windows.Media.FontFamily("'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif")
+				};
 
 				ListView1.Items.Add(text);
 			}
@@ -72,9 +78,12 @@ namespace Project
 			{
 				if (monsters.ElementAt(i).name.ToLower().Contains(TextBox1.Text.ToLower()))
 				{
-					TextBlock text = new TextBlock();
-					text.Text = monsters.ElementAt(i).name;
-					text.Tag = monsters.ElementAt(i).index.ToString();
+					TextBlock text = new TextBlock
+					{
+						Text = monsters.ElementAt(i).name,
+						Tag = monsters.ElementAt(i).index.ToString(),
+						FontFamily = new System.Windows.Media.FontFamily("'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif")
+					};
 					ListView1.Items.Add(text);
 				}
 			}
@@ -92,6 +101,15 @@ namespace Project
 		}
 		private void Online(object sender, RoutedEventArgs e)
 		{
+			if (isOnline) 
+			{
+				Online1.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 0, 0));
+			}
+			else 
+			{
+				Online1.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 255, 0));
+			}
+
 			isOnline = !isOnline;
 			Console.WriteLine(isOnline.ToString());
 		}

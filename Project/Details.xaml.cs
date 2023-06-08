@@ -48,7 +48,11 @@ namespace Project
 				Repositories.Repository repository = new Repositories.Repository();
 				monster = await repository.GetMonsterAsync(tag);
 			}
+
 			Title.Text = monster.name;
+			Overview.Text = monster.size + " " + monster.type + ", " + monster.alignment;
+
+			Description.Text = monster.desc;
 		}
 
 		private void Back(object sender, RoutedEventArgs e)

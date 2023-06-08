@@ -8,6 +8,7 @@
 	Title="Details"
 	d:DesignHeight="450"
 	d:DesignWidth="800"
+	Background="#FDF1DC"
 	mc:Ignorable="d">
 
 	<Grid>
@@ -15,6 +16,7 @@
 			<ColumnDefinition Width="Auto" />
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
 			<RowDefinition Height="Auto" />
 			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
@@ -37,14 +39,52 @@
 				Grid.Column="0"
 				Click="Back"
 				Content="Back" />
+		</Grid>
+		<Grid Grid.Row="1" Grid.Column="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="10" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
 			<TextBlock
 				x:Name="Title"
-				Grid.Row="1"
-				Grid.Column="0"
+				Grid.Column="1"
+				FontFamily="'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif"
 				FontSize="24"
-				Foreground="#000000"
+				Foreground="#7A200D"
 				Text="Loading..." />
 
+			<TextBlock
+				x:Name="Overview"
+				Grid.Row="2"
+				Grid.Column="1"
+				Width="400"
+				FontFamily="'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif"
+				FontSize="12"
+				FontStyle="Italic"
+				Text="Wagoogus" />
+		</Grid>
+		<Grid Grid.Row="2" Grid.Column="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="10" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="10" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<TextBlock
+				x:Name="Description"
+				Grid.Row="1"
+				Grid.Column="1"
+				Width="400"
+				FontFamily="'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif"
+				FontSize="14"
+				Text=""
+				TextWrapping="Wrap" />
 		</Grid>
 
 	</Grid>
