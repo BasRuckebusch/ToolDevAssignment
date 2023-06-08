@@ -17,6 +17,14 @@ namespace Project.Model
 			public string type { get; set; }
 			public string subtype { get; set; }
 			public string alignment { get; set; }
+
+			public int strength { get; set; }
+			public int dexterity { get; set; }
+			public int constitution { get; set; }
+			public int intelligence { get; set; }
+			public int wisdom { get; set; }
+			public int charisma { get; set; }
+
 			public string image { get; set; }
 		}
 	}

@@ -65,7 +65,31 @@ namespace Project
 			Overview.Text = monster.size + " " + monster.type + ", " + monster.alignment;
 
 			Description.Text = monster.desc;
+
+			STR.Text = AbilityMod(monster.strength);
+			DEX.Text = AbilityMod(monster.dexterity);
+			CON.Text = AbilityMod(monster.constitution);
+			INT.Text = AbilityMod(monster.intelligence);
+			WIS.Text = AbilityMod(monster.wisdom);
+			CHA.Text = AbilityMod(monster.charisma);
 		}
+
+		string AbilityMod(int i) 
+		{
+			string result = "";
+			int mod = (i - 10) / 2;
+
+			if (mod >= 0)
+			{
+				result = i.ToString() + " (+" + mod.ToString() + ")";
+			}
+			else
+			{
+				result = i.ToString() + " (-" + mod.ToString() + ")";
+			}
+			return result;
+		}
+
 
 		private void Back(object sender, RoutedEventArgs e)
 		{
