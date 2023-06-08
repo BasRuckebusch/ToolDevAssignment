@@ -72,6 +72,14 @@ namespace Project
 			INT.Text = AbilityMod(monster.intelligence);
 			WIS.Text = AbilityMod(monster.wisdom);
 			CHA.Text = AbilityMod(monster.charisma);
+
+			ArmorClass.Inlines.Clear();
+			ArmorClass.Inlines.Add(new Run(monster.armor_class.ElementAt(0).value.ToString() + " (" + monster.armor_class.ElementAt(0).type + ")"));
+			HitPoints.Inlines.Clear();
+			HitPoints.Inlines.Add(new Run(monster.hit_points + " (" + monster.hit_points_roll + ")"));
+			Speed.Inlines.Clear();
+			Speed.Inlines.Add(new Run(monster.speed.walk));
+
 		}
 
 		string AbilityMod(int i) 

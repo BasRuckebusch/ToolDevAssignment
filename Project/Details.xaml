@@ -20,6 +20,7 @@
 			<RowDefinition Height="Auto" />
 			<RowDefinition Height="Auto" />
 			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
 
 		<Grid Grid.Row="0" Grid.Column="0">
@@ -69,6 +70,57 @@
 				Text="" />
 		</Grid>
 		<Grid Grid.Row="2" Grid.Column="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="10" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="20" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+
+			<TextBlock
+				Grid.Row="1"
+				Grid.Column="1"
+				FontFamily="'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif"
+				FontSize="14"
+				Foreground="#7A200D"
+				TextWrapping="Wrap">
+				<Span FontWeight="Bold">Armor Class</Span>
+				<Span x:Name="ArmorClass"><Run>10</Run></Span>
+			</TextBlock>
+			<TextBlock
+				Grid.Row="2"
+				Grid.Column="1"
+				FontFamily="'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif"
+				FontSize="14"
+				Foreground="#7A200D"
+				TextWrapping="Wrap">
+				<Span FontWeight="Bold">Hit Points</Span>
+				<Span x:Name="HitPoints"><Run>10</Run></Span>
+			</TextBlock>
+			<TextBlock
+				Grid.Row="3"
+				Grid.Column="1"
+				FontFamily="'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif"
+				FontSize="14"
+				Foreground="#7A200D"
+				TextWrapping="Wrap">
+				<Span FontWeight="Bold">Speed</Span>
+				<Span x:Name="Speed"><Run>30 ft.</Run></Span>
+			</TextBlock>
+
+			<Border
+				Grid.Row="0"
+				Grid.Column="1"
+				Margin="0,10,-790,5"
+				Background="{DynamicResource GridLineBrush}"
+				BorderThickness="0,0,1,0" />
+
+		</Grid>
+		<Grid Grid.Row="3" Grid.Column="0">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="10" />
 				<ColumnDefinition Width="75" />
@@ -210,7 +262,7 @@
 				Background="{DynamicResource GridLineBrush}"
 				BorderThickness="0,0,1,0" />
 		</Grid>
-		<Grid Grid.Row="3" Grid.Column="0">
+		<Grid Grid.Row="4" Grid.Column="0">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="10" />
 				<ColumnDefinition Width="40.133" />

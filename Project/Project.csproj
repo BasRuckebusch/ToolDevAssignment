@@ -133,6 +133,8 @@
     <EmbeddedResource Include="Resources\aboleth.json" />
     <EmbeddedResource Include="Resources\acolyte.json" />
     <EmbeddedResource Include="Resources\monsters.json" />
+    <EmbeddedResource Include="Resources\adult-black-dragon.json" />
+    <EmbeddedResource Include="Resources\tarrasque.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

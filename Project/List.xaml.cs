@@ -109,15 +109,35 @@ namespace Project
 				_parentWindow.ViewDetail(tag, isOnline);	
 			}
 		}
-		private void Online(object sender, RoutedEventArgs e)
+		private async void Online(object sender, RoutedEventArgs e)
 		{
 			if (isOnline) 
 			{
+				Repositories.Repository repository = new Repositories.Repository();
+				monsters = await repository.GetAllMonstersAsync();
 				Online1.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 0, 0));
 			}
 			else 
 			{
+				Repositories.OnlineRepo repository = new Repositories.OnlineRepo();
+				monsters = await repository.GetAllMonstersAsync();
+
 				Online1.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(15, 134, 13));
+			}
+
+			ListView1.Items.Clear();
+
+			for (int i = 0; i < monsters.Count(); i++)
+			{
+
+				TextBlock text = new TextBlock
+				{
+					Text = monsters.ElementAt(i).name,
+					Tag = monsters.ElementAt(i).index.ToString(),
+					FontFamily = new System.Windows.Media.FontFamily("'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif")
+				};
+
+				ListView1.Items.Add(text);
 			}
 
 			isOnline = !isOnline;
