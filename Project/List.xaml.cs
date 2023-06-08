@@ -71,7 +71,7 @@ namespace Project
 			}
 		}
 
-		private void Search(object sender, RoutedEventArgs e)
+		private void Search()
 		{
 			ListView1.Items.Clear();
 			for (int i = 0; i < monsters.Count(); i++)
@@ -87,6 +87,16 @@ namespace Project
 					ListView1.Items.Add(text);
 				}
 			}
+		}
+
+		private void SearchClicked(object sender, RoutedEventArgs e)
+		{
+			Search();
+		}
+
+		private void TextChanged(object sender, TextChangedEventArgs e)
+		{
+			Search();
 		}
 
 		private void listView_Click(object sender, RoutedEventArgs e)
